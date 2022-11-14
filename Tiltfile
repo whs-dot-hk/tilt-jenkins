@@ -5,6 +5,8 @@ metadata:
   name: %s
 """ % name))
 
+name = "jenkins"
+
 create_namespace("jenkins")
 
-k8s_yaml(helm("charts/jenkins", name = "jenkins", namespace = "jenkins"))
+k8s_yaml(helm("charts/jenkins", name, namespace = name))
